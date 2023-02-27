@@ -6,7 +6,7 @@ import { Box } from "@mui/system"
 export const SideBar = ({ drawerWidth }) => {
   return (
    <Box
-        component='Nav'
+        component='nav'
         sx={{ width: { sm: drawerWidth }, flexShrink: {sm: 0 }}}
    
    >
@@ -26,17 +26,17 @@ export const SideBar = ({ drawerWidth }) => {
                 {
                     ['Enero','Febrero','Marzo','Abril'].map(text => (
                         <ListItem key={ text } disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <TurnedInNot text= {text} />
-                            </ListItemIcon>
-                            <Grid container>
-                                <ListItemText primary={ text } />
-                                <ListItemText secondary={ 'Elit veniam labore incididunt nisi consectetur.' } />
-                            </Grid>
-                        </ListItemButton>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <TurnedInNot text= {text} />
+                                </ListItemIcon>
+                                <Grid container>
+                                    <ListItemText primary={ text } />
+                                    <ListItemText secondary={ 'Elit veniam labore incididunt nisi consectetur.' } />
+                                </Grid>
+                            </ListItemButton>
 
-                    </ListItem>
+                        </ListItem>
                     ))
                 }
             </List>
