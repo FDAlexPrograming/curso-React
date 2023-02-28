@@ -1,4 +1,4 @@
-import { LogoutOutlined, MenuOutlined, Padding } from "@mui/icons-material"
+import { LogoutOutlined, MenuOutlined } from "@mui/icons-material"
 import { AppBar, Grid, IconButton, Toolbar, Typography } from "@mui/material"
 
 
