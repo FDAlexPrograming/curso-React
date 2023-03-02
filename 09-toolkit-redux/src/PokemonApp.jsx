@@ -1,6 +1,5 @@
 import { useEffect } from "react"
-import { useDispatch, useSelector, useStore } from "react-redux"
-import { pokemonApi } from "./api/pokemonApi";
+import { useDispatch, useSelector } from "react-redux"
 import { getPokemons } from "./store/slices/pokemon";
 
 
