@@ -1,9 +1,13 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
+import { useDispatch, useSelector } from 'react-redux'
+import { increment, decrement, incrementByAmount} from './store/slices/counter'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const amount = 5;
+  const { counter } = useSelector( state => state.counter)
+  const dispatch = useDispatch();
+
 
   return (
     <div className="App">
@@ -15,10 +19,16 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1> count is {counter}</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={ () => dispatch( increment() ) } >
+         Incrementar
+        </button>
+        <button onClick={ () => dispatch( decrement() ) } >
+         Decrementar
+        </button>
+        <button onClick={ () => dispatch( incrementByAmount(amount) ) } >
+        Incrementar de a { amount }
         </button>
       
       </div>
