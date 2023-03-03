@@ -37,7 +37,12 @@ export const RegisterPage = () => {
 
             <Grid container direction='row' justifyContent='end'>
               <Typography sx={{ m: 1 }}> ¿Ya tienes cuenta? </Typography>
-                <Button component={ RouterLink } to="/auth/login" >
+                <Button component={ RouterLink } to="/auth/login" sx={{ 
+                                                                    fontSize: '10px',
+                                                                  ':hover':{ backgroundColor: '#6c6b73', color:'white', transition:'.5s', },
+                                                                    }} 
+                
+                >
                   Ingresar
                 </Button>
             

@@ -82,7 +82,11 @@ export const LoginPage = () => {
             </Grid>
 
             <Grid container direction='row' justifyContent='end'>
-              <Button component={ RouterLink } to="/auth/register" >
+              <Button component={ RouterLink } to="/auth/register" sx={{ 
+                                                                    fontSize: '10px',
+                                                                  ':hover':{ backgroundColor: '#6c6b73', color:'white', transition:'.5s', },
+                                                                    }} 
+              >
                 Crear una cuenta
               </Button>
              
