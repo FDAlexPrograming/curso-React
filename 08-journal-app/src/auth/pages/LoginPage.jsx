@@ -1,17 +1,17 @@
-import { Link as RouterLink } from "react-router-dom"
 import { useDispatch } from "react-redux"
+import { Link as RouterLink } from "react-router-dom"
 import { Google } from "@mui/icons-material"
 import { Button, Grid, Link, TextField, Typography } from "@mui/material"
 import { useForm } from "../../hooks"
 import { AuthLayout } from "../layout/AuthLayout"
-import { chekingAuthentication } from "../../store/auth"
+import { chekingAuthentication, startGoogleSignIn } from "../../store/auth"
 
 export const LoginPage = () => {
 
   const dispatch =  useDispatch();
 
   const { email, password, onInputChange } =   useForm({
-    email: 'fariasdossantos@hmail.com',
+    email: 'fariasdossantos@hotmail.com',
     password: '123456'
   });
 
@@ -23,7 +23,7 @@ export const LoginPage = () => {
 
   const onGloogleSignIn = () => {
     console.log('onGloogleSignIn');
-    dispatch( startGoogleSignIn());
+    dispatch( startGoogleSignIn ) ;
   }
 
   return (

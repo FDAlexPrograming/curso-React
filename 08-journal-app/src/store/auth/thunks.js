@@ -8,6 +8,6 @@ export const chekingAuthentication = ( email, Password) => {
 
 export const startGoogleSignIn = () => {
     return async( dispatch ) => {
-        dispatch( checkingCredentials() );
+        dispatch( startGoogleSignIn );
     }
 }
